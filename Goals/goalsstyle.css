@@ -147,3 +147,18 @@ h1 {
     color: gray;
     opacity: 0.7;
 }
+
+.progressBar {
+    width: 100%;
+    height: 1rem;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progressLevel {
+    height: 1rem;
+    width: 0%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
