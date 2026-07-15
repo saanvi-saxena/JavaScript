@@ -48,14 +48,30 @@ function createGoal(goal){
 
         const editBtn = document.createElement("button");
         editBtn.textContent = "Edit";
+        editBtn.classList.add("editBtn");
+
         
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete";
+        deleteBtn.classList.add("deleteBtn");
 
-        li.append(input);
-        li.append(span);
-        li.append(editBtn);
-        li.append(deleteBtn);
+        // Left side (checkbox + goal text)
+        const goalInfo = document.createElement("div");
+        goalInfo.classList.add("goalInfo");
+
+        goalInfo.append(input);
+        goalInfo.append(span);
+
+        // Right side (Edit + Delete buttons)
+        const buttonGroup = document.createElement("div");
+        buttonGroup.classList.add("buttonGroup");
+
+        buttonGroup.append(editBtn);
+        buttonGroup.append(deleteBtn);
+
+        // Add both sections to the list item
+        li.append(goalInfo);
+        li.append(buttonGroup);
 
         goalList.append(li);
         
